@@ -10,7 +10,7 @@
 
 מיפוי Routes ללקוח:
 שליפת רשימת הלקוחות Get('https://MeuhedetDentist.co.il/clients ') 
-שליפת תינוק לפי מזהה  Get('https://MeuhedetDentist.co.il/clients/{id} ') 
+שליפת לקוח לפי מזהה  Get('https://MeuhedetDentist.co.il/clients/{id} ') 
 הוספת לקוח PUT('https://MeuhedetDentist.co.il/clients ') 
 עדכון לקוח POST('https://MeuhedetDentist.co.il/clients/{id } ')
 
