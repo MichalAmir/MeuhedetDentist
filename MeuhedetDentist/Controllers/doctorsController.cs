@@ -29,7 +29,7 @@ namespace MeuhedetDentist.Controllers
         {
             foreach (var doctor in _contextC.doctors)
             {
-                if(IdDoctors == doctor.Id)
+                if(doctor.IdDoctors == IdDoctors )
                     return doctor;
             }
             return null;
@@ -48,9 +48,9 @@ namespace MeuhedetDentist.Controllers
         {
             foreach(var doctor in _contextC.doctors)
             {
-                if (doctor.IdDoctor == IdDoctors)
+                if (doctor.IdDoctors == IdDoctors)
                 {
-                    doctor.IdDoctor=value.IdDoctors;
+                    doctor.IdDoctors = value.IdDoctors;
                     doctor.NameDoctors = value.NameDoctors;
                     doctor.SalaryDoctors = value.SalaryDoctors;
                     doctor.HoursDoctors = value.HoursDoctors;            

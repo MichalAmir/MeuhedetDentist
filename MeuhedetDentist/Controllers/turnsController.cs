@@ -13,7 +13,7 @@ namespace MeuhedetDentist.Controllers
         private readonly DataContext _contextT;
         public turnsController(DataContext context)
         {
-            _contextC = context;
+            _contextT = context;
         }
 
         // GET: api/<turnsController>
@@ -25,7 +25,7 @@ namespace MeuhedetDentist.Controllers
 
         // GET api/<turnsController>/5
         [HttpGet("{id}")]
-        public ActionResult Get(string id)
+        public ActionResult Get(int id)
         {
             foreach(var turns in _contextT.turns)
             {

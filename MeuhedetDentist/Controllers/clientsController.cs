@@ -11,12 +11,6 @@ namespace MeuhedetDentist.Controllers
     {
         
         private readonly DataContext _contextC;
-
-        public string IdClient { get; private set; }
-        public string NameClient { get; private set; }
-        public int AgeClient { get; private set; }
-        public object AdressClient { get; private set; }
-
         public clientsController(DataContext context)
         {
             _contextC = context;
@@ -26,12 +20,12 @@ namespace MeuhedetDentist.Controllers
         [HttpGet]
         public List<clients> Get()
         {
-            return _contextC.Clients;
+            return _contextC.clients;
         }
 
         // GET api/<clientsController>/5
         [HttpGet("{id}")]
-        public clients Get(string id)
+        public clients Get(int id)
         {
             foreach (clients client in _contextC.clients)
             {
@@ -51,7 +45,7 @@ namespace MeuhedetDentist.Controllers
 
         // PUT api/<clientsController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public void Put(int id, [FromBody] clients value)
         {
             clients update_client = new clients { IdClient = value.IdClient, NameClient = value.NameClient, AgeClient = value.AgeClient, AdressClient = value.AdressClient };
             foreach (clients client in _contextC.clients)
